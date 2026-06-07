@@ -1,0 +1,13 @@
+{
+  "name": "ever-browser",
+  "version": "0.1.0",
+  "description": "Control a real Chrome browser from your AI coding agent via the Ever CLI — navigate, snapshot, click, type, extract, screenshot, and record video.",
+  "author": {
+    "name": "namuh",
+    "url": "https://foreverbrowsing.com"
+  },
+  "homepage": "https://foreverbrowsing.com",
+  "repository": "https://github.com/namuh-eng/everbrowser",
+  "license": "Apache-2.0",
+  "keywords": ["browser", "automation", "cdp", "mcp", "web-agent"]
+}

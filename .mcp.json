@@ -1,0 +1,8 @@
+{
+  "mcpServers": {
+    "ever-browser": {
+      "command": "npx",
+      "args": ["-y", "@everbrowser/cli@^0.2", "mcp"]
+    }
+  }
+}

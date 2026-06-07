@@ -1,0 +1,21 @@
+{
+  "name": "everbrowser",
+  "interface": {
+    "displayName": "Ever"
+  },
+  "plugins": [
+    {
+      "name": "ever-browser",
+      "source": {
+        "source": "url",
+        "url": "https://github.com/namuh-eng/everbrowser.git",
+        "ref": "main"
+      },
+      "policy": {
+        "installation": "AVAILABLE",
+        "authentication": "ON_INSTALL"
+      },
+      "category": "Productivity"
+    }
+  ]
+}

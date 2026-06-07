@@ -5,8 +5,8 @@
 set -euo pipefail
 
 REPO_OWNER="namuh-eng"
-REPO_NAME="ever-skills"
-PROJECT_NAME="ever-skills"
+REPO_NAME="everbrowser"
+PROJECT_NAME="everbrowser"
 
 # ---------------------------------------------------------------------------
 # Star prompt — safe to source and call independently for testing
@@ -75,7 +75,7 @@ Usage: install.sh [OPTIONS]
 Install Ever Skills — browser automation skills for AI coding assistants.
 
 Steps:
-  1. Installs the Ever CLI (npm install -g @ever/cli)
+  1. Installs the Ever CLI (npm install -g @everbrowser/cli)
   2. Installs skills into your AI coding assistant (npx skills add)
   3. Optionally prompts to star the repo on GitHub
 
@@ -94,7 +94,7 @@ HELP
   done
 
   printf "[%s] Installing Ever CLI...\n" "$PROJECT_NAME"
-  npm install -g @ever/cli
+  npm install -g @everbrowser/cli
 
   printf "\n[%s] Installing skills...\n" "$PROJECT_NAME"
   npx skills add "$REPO_OWNER/$REPO_NAME"

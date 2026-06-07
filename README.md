@@ -22,7 +22,7 @@ Install a skill, and your AI assistant immediately knows how to control your bro
 If you already have the Chrome extension loaded and signed in:
 
 ```bash
-bash <(curl -fsSL https://raw.githubusercontent.com/namuh-eng/ever-skills/main/install.sh)
+bash <(curl -fsSL https://raw.githubusercontent.com/namuh-eng/everbrowser/main/install.sh)
 ```
 
 This installs the CLI, adds skills to your AI coding assistant, verifies everything works, and optionally prompts to star the repo. Pass `--skip-star-prompt` or set `SKIP_STAR_PROMPT=1` to suppress the star prompt (e.g. in CI).
@@ -31,10 +31,10 @@ To set up from scratch, follow the steps below.
 
 ### Step 1 — Install the Chrome Extension
 
-Download from the [latest release](https://github.com/namuh-eng/ever-skills/releases/latest):
+Download from the [latest release](https://github.com/namuh-eng/everbrowser/releases/latest):
 
 ```bash
-curl -L -o ever-extension.zip https://github.com/namuh-eng/ever-skills/releases/latest/download/everextension-0.1.0-chrome.zip
+curl -L -o ever-extension.zip https://github.com/namuh-eng/everbrowser/releases/latest/download/everextension-0.1.0-chrome.zip
 unzip ever-extension.zip -d ever-extension
 ```
 
@@ -63,7 +63,7 @@ ever --version
 ### Step 4 — Install Skills
 
 ```bash
-npx skills add namuh-eng/ever-skills
+npx skills add namuh-eng/everbrowser
 ```
 
 The interactive CLI will prompt to:
@@ -79,6 +79,27 @@ Additional agents are available during setup, including **Claude Code** (`.claud
 
 Skills are fetched from the repository so they stay up to date — do not copy `SKILL.md` from `node_modules` as it will become stale.
 
+### Or install as a plugin (Claude Code / Codex)
+
+This repo is also a **plugin** for Claude Code and OpenAI Codex — one install wires up both the skill and the Ever MCP server.
+
+**Claude Code:**
+
+```
+/plugin marketplace add namuh-eng/everbrowser
+/plugin install ever-browser@everbrowser
+```
+
+**Codex:**
+
+```bash
+codex plugin marketplace add namuh-eng/everbrowser
+```
+
+Then enable **ever-browser** from the Codex plugin directory and restart.
+
+The plugin runs the MCP server via `npx -y @everbrowser/cli@^0.2 mcp`, so you still need the Chrome extension loaded and signed in (Steps 1–2 above) and the CLI available.
+
 <details>
 <summary><strong>Manual install (without npx skills)</strong></summary>
 
@@ -87,7 +108,7 @@ Skills are fetched from the repository so they stay up to date — do not copy `
 ```bash
 mkdir -p .agents/skills/ever-browser
 curl -o .agents/skills/ever-browser/SKILL.md \
-  https://raw.githubusercontent.com/namuh-eng/ever-skills/main/ever-browser/SKILL.md
+  https://raw.githubusercontent.com/namuh-eng/everbrowser/main/skills/ever-browser/SKILL.md
 ```
 
 **Claude Code (`.claude/skills/`)**:
@@ -95,7 +116,7 @@ curl -o .agents/skills/ever-browser/SKILL.md \
 ```bash
 mkdir -p .claude/skills/ever-browser
 curl -o .claude/skills/ever-browser/SKILL.md \
-  https://raw.githubusercontent.com/namuh-eng/ever-skills/main/ever-browser/SKILL.md
+  https://raw.githubusercontent.com/namuh-eng/everbrowser/main/skills/ever-browser/SKILL.md
 ```
 
 </details>
@@ -138,10 +159,10 @@ If all three commands succeed, you're ready to go.
 If you used the [install script](#one-liner-install), this prompt happens automatically. Otherwise:
 
 ```bash
-gh api --method PUT /user/starred/namuh-eng/ever-skills --silent
+gh api --method PUT /user/starred/namuh-eng/everbrowser --silent
 ```
 
-Or star it on GitHub: **[github.com/namuh-eng/ever-skills](https://github.com/namuh-eng/ever-skills)**
+Or star it on GitHub: **[github.com/namuh-eng/everbrowser](https://github.com/namuh-eng/everbrowser)**
 
 ---
 
@@ -236,7 +257,7 @@ See [ever-browser/SKILL.md](./ever-browser/SKILL.md) for a complete example.
 
 ### 4. Share it
 
-**Add to this repo:** Open a PR to [namuh-eng/ever-skills](https://github.com/namuh-eng/ever-skills) — add your skill folder at the root level.
+**Add to this repo:** Open a PR to [namuh-eng/everbrowser](https://github.com/namuh-eng/everbrowser) — add your skill folder at the root level.
 
 **Share from your own repo:** Others can install your skill directly:
 

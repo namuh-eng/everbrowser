@@ -1,0 +1,16 @@
+{
+  "name": "everbrowser",
+  "owner": {
+    "name": "namuh",
+    "url": "https://foreverbrowsing.com"
+  },
+  "plugins": [
+    {
+      "name": "ever-browser",
+      "source": "./",
+      "description": "Control a real Chrome browser from your AI coding agent via the Ever CLI — navigate, snapshot, click, type, extract, screenshot, and record video.",
+      "category": "web-development",
+      "tags": ["browser", "automation", "mcp", "cdp"]
+    }
+  ]
+}
