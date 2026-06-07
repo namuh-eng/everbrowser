@@ -98,7 +98,7 @@ codex plugin marketplace add namuh-eng/everbrowser
 
 Then enable **ever-browser** from the Codex plugin directory and restart.
 
-The plugin runs the MCP server via `npx -y @everbrowser/cli@^0.2 mcp`, so you still need the Chrome extension loaded and signed in (Steps 1–2 above) and the CLI available.
+The plugin runs the MCP server via `npx -y -p @everbrowser/cli@^0.2 ever mcp`, so you still need the Chrome extension loaded and signed in (Steps 1–2 above) and the CLI available.
 
 <details>
 <summary><strong>Manual install (without npx skills)</strong></summary>
