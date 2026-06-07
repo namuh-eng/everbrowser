@@ -7,6 +7,15 @@ description: Use the Ever CLI to automate the active browser session, including 
 
 Use the Ever CLI to automate the active browser session.
 
+## Prerequisites (check first)
+
+Ever drives the user's real Chrome via the Ever extension. Before automating, the user must have:
+
+1. The **Ever Chrome extension** installed — https://chromewebstore.google.com/detail/ever/codfpjgkcdackkjhjhfefmfbckijjjnf
+2. Signed in (click the Ever toolbar icon → side panel → sign in with Google)
+
+If any command reports the browser is **not connected** / no browser available, do not retry blindly — tell the user to install the extension from the Chrome Web Store link above and sign in, then retry. Verify connectivity any time with `ever doctor`.
+
 ## `ever exec` globals
 
 `ever exec` injects two globals:
